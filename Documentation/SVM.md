@@ -38,3 +38,28 @@ This is a convex quadratic programming problem.
 - **Class Imbalance**: Use `class_weight='balanced'` for unbalanced datasets.
 
 ## Implementation Example (scikit-learn)
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
+
+clf = make_pipeline(StandardScaler(), SVC(kernel='rbf', C=1.0, gamma='scale'))
+clf.fit(X_train, y_train)
+
+
+
+
+## Use Cases
+- Binary and multiclass classification (e.g., spam detection, image recognition)
+- Regression (SVR)
+- Outlier/novelty detection (One-Class SVM)
+
+## Summary Table: Key SVM Parameters
+
+| Parameter     | Description                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| kernel        | Type of kernel function (linear, poly, rbf, sigmoid, custom)                |
+| C             | Regularization parameter, controls trade-off between margin and misclassification |
+| gamma         | Kernel coefficient for RBF, poly, sigmoid kernels (influence of single training examples) |
+| degree        | Degree of the polynomial kernel function                                    |
+| coef0         | Independent term in poly and sigmoid kernels                                |
+| class_weight  | Adjusts weights for classes (useful for imbalanced data)                    |
