@@ -2,7 +2,7 @@
 
 ## Definition and Purpose
 - **Naive Bayes** is a family of supervised machine learning algorithms used primarily for **classification** tasks.
-- It is based on **Bayes’ theorem** and assumes that all features are *conditionally independent* given the class label (the "naive" assumption)[1][6].
+- It is based on **Bayes’ theorem** and assumes that all features are *conditionally independent* given the class label (the "naive" assumption).
 
 ## Core Concepts
 
@@ -37,21 +37,21 @@
 
 1. **Estimate Priors**: Compute \( P(y) \) for each class from the training data.
 2. **Estimate Likelihoods**: Compute \( P(x_i|y) \) for each feature and class.
-3. **Prediction**: For a new instance, calculate the posterior for each class and assign the class with the highest posterior[1][3][4].
+3. **Prediction**: For a new instance, calculate the posterior for each class and assign the class with the highest posterior.
 
 ## Key Parameters
 
 | Parameter      | Description                                                     |
 |----------------|-----------------------------------------------------------------|
-| alpha (α)      | Smoothing parameter to avoid zero probabilities (Laplace/Lidstone smoothing)[3] |
-| binarize       | Threshold for converting features to binary (Bernoulli NB)[3]   |
+| alpha (α)      | Smoothing parameter to avoid zero probabilities (Laplace/Lidstone smoothing) |
+| binarize       | Threshold for converting features to binary (Bernoulli NB)   |
 | fit_prior      | Whether to learn class priors or use uniform priors             |
 
 ## Practical Tips
 
-- **Data Requirements**: Works best when features are independent and relevant to the class[4][12].
+- **Data Requirements**: Works best when features are independent and relevant to the class.
 - **Speed**: Extremely fast to train and predict, suitable for large datasets[1][9].
-- **Probability Estimates**: Naive Bayes is a good classifier but not a good probability estimator; predicted probabilities may not be well-calibrated[1].
+- **Probability Estimates**: Naive Bayes is a good classifier but not a good probability estimator; predicted probabilities may not be well-calibrated.
 - **Handling Zero Counts**: Use smoothing (e.g., alpha > 0) to avoid zero probabilities for unseen feature-class combinations[3].
 - **Feature Scaling**: Not required for Naive Bayes, except for Gaussian NB, where normalization may help.
 
@@ -66,7 +66,7 @@ y_pred = gnb.predict(X_test)
 - **Text classification** (spam detection, sentiment analysis)
 - **Document categorization**
 - **Medical diagnosis**
-- **Recommendation systems**[10][12][13]
+- **Recommendation systems**
 
 ## Advantages
 
@@ -92,4 +92,4 @@ y_pred = gnb.predict(X_test)
 
 ---
 
-Let me know if you need a Markdown file or more details on specific variants!
+
