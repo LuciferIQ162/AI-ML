@@ -1,0 +1,57 @@
+# Coefficient of Determination (R²): Key Points & Visual Guide
+
+## 📌 Summary
+
+- **R²** (coefficient of determination) measures how well a statistical model explains the variation in the **dependent variable** using **independent variable(s)**.
+
+## 🎯 Range
+
+- **0**: No variance explained  
+- **1**: All variance explained  
+- Values between 0 and 1: Partial explanatory power
+
+## 🧠 Interpretation
+
+- **R² = 0.25** means **25% of the variance** in the dependent variable is explained by the model.
+
+## 📐 Formula
+
+R² = 1 - (SS_res / SS_tot)
+
+
+- **SS_res**: Sum of squared residuals (unexplained variance)  
+- **SS_tot**: Total sum of squares (total variance)
+
+In simple linear regression, R² = (correlation coefficient)².
+
+## ✅ Properties
+
+- Higher R² → Better fit
+- Does **not imply causation**
+
+## ⚠️ Limitations
+
+- **Can be negative** for poor models.
+- R² **increases with more predictors**, even if irrelevant. Use **Adjusted R²** for multiple regression.
+
+---
+
+## 📊 Visual Interpretation of R² Values
+
+The table below shows how much variance is explained by different R² values:
+
+| R² Value | % Variance Explained | Interpretation                |
+|----------|----------------------|-------------------------------|
+| 0.00     | 0%                   | No explanatory power          |
+| 0.25     | 25%                  | Weak model                    |
+| 0.50     | 50%                  | Moderate explanatory power    |
+| 0.75     | 75%                  | Strong model                  |
+| 1.00     | 100%                 | Perfect fit                   |
+
+---
+
+### 📌 Key Takeaway:
+
+**R² quantifies the proportion of variation in the dependent variable explained by your model.**  
+- **Range:** 0 (no fit) to 1 (perfect fit)
+- **Use Adjusted R²** to avoid misleading results in multiple regression.
