@@ -1,0 +1,45 @@
+## Mean Squared Error (MSE) and Root Mean Squared Error (RMSE)
+
+### Concise Summary
+
+Both MSE and RMSE are widely used metrics to evaluate the performance of regression models. They quantify the average magnitude of the errors between predicted values and actual values.
+
+* **MSE** averages the squared differences between predictions and actuals. It heavily penalizes large errors due to the squaring operation.
+* **RMSE** is the square root of MSE. It brings the error metric back to the same units as the target variable, making it more interpretable than MSE.
+
+Lower values for both MSE and RMSE indicate a better fit of the model to the data.
+
+### Mean Squared Error (MSE)
+
+**Definition:**
+Mean Squared Error (MSE) measures the average of the squares of the errors—that is, the average squared difference between the estimated values and the actual value.
+
+**Formula:**
+
+$MSE = \frac{1}{n} \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2$
+
+Where:
+* $n$ is the number of data points.
+* $Y_i$ is the actual observed value.
+* $\hat{Y}_i$ is the predicted value.
+
+**Characteristics:**
+* **Units:** The units of MSE are the square of the units of the target variable.
+* **Sensitivity to Outliers:** Due to the squaring of errors, MSE is highly sensitive to large errors and outliers. A single large error can significantly increase the MSE.
+* **Differentiability:** MSE is differentiable, which makes it a common loss function in machine learning algorithms (e.g., in linear regression) as it can be optimized using gradient descent.
+* **Interpretation:** It provides a measure of the average squared deviation. A lower MSE indicates a better model fit.
+
+### Root Mean Squared Error (RMSE)
+
+**Definition:**
+Root Mean Squared Error (RMSE) is the square root of the Mean Squared Error. It measures the standard deviation of the residuals (prediction errors).
+
+**Formula:**
+
+$RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2}$
+
+**Characteristics:**
+* **Units:** The units of RMSE are the same as the units of the target variable, making it more interpretable than MSE. For example, if you are predicting house prices in dollars, RMSE will also be in dollars.
+* **Sensitivity to Outliers:** Like MSE, RMSE is also sensitive to outliers due to the underlying squaring of errors.
+* **Interpretation:** RMSE represents the typical magnitude of the errors. A lower RMSE indicates a better model fit, and it's easier to understand in the context of the original data. It tells you, on average, how far off your predictions are from the actual values.
+* **Comparison:** RMSE is generally preferred over MSE when you need an error metric in the same units as the target variable for easier interpretation and comparison across different models or datasets.
