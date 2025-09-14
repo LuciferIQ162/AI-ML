@@ -84,4 +84,4 @@ print("\nEvaluating model...")
 y_pred = dtc.predict(X_val)
 accuracy = accuracy_score(y_val, y_pred)
 print(f"\n✅ Validation Accuracy: {accuracy:.4f}")
-print 
+print (f"\n✅ F2 Score: {F2_score(y_val, y_pred)}")
