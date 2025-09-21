@@ -7,21 +7,18 @@ from sklearn.metrics import classification_report, confusion_matrix
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import json, confusion_matrix
-import numpy as np
-import matplotlin.pyplot as plt
-import seaborn as sns
 import json
+
 #Needed hyperparameters basic ones!!
 IMG_SIZE = (224, 224)
 BATCH = 32
 SEED = 42
-dataset = "/home/shobhit/UNIFIED_mentor_project/Animal Classification/dataset" 
+dataset = "/home/shobhit/UNIFIED_mentor_project/Animal Classification/dataset"
 # generating some random data!!
 datagen = ImageDataGenerator(
     rescale=1./255,
     validation_split=0.2,
-    rotation_range=20,   
+    rotation_range=20,
     horizontal_flip=True,
     vertical_flip=True
 )
@@ -88,15 +85,15 @@ print("\n✅ Model training complete.")
 print("\nEvaluating the model on the test set...")
 
 # Get true labels
-y_true = test_generator.classes
+y_true = validation_generator.classes
 # Get predicted labels
-test_generator.reset() # Important to reset the generator before predicting
-y_pred_proba = model.predict(test_generator, verbose=1)
+validation_generator.reset() # Important to reset the generator before predicting
+y_pred_proba = model.predict(validation_generator, verbose=1)
 y_pred = np.argmax(y_pred_proba, axis=1)
 
 # Classification Report
 print("\nClassification Report:")
-print(classification_report(y_true, y_pred, target_names=list(test_generator.class_indices.keys())))
+print(classification_report(y_true, y_pred, target_names=list(validation_generator.class_indices.keys())))
 
 # Confusion Matrix
 print("\nConfusion Matrix:")
@@ -105,7 +102,8 @@ print(cm)
 
 # Plotting the confusion matrix
 plt.figure(figsize=(10, 8))
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=list(test_generator.class_indices.keys()), yticklabels=list(test_generator.class_indices.keys()))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=list(validation_generator.class_indices.keys()), yticklabels=list(validation_generator.class_indices.keys()))
+
 plt.title('Confusion Matrix')
 plt.ylabel('Actual')
 plt.xlabel('Predicted')
