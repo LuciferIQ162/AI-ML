@@ -12,7 +12,7 @@ import numpy as np
 import matplotlin.pyplot as plt
 import seaborn as sns
 import json
-Needed hyperparameters basic ones!!
+#Needed hyperparameters basic ones!!
 IMG_SIZE = (224, 224)
 BATCH = 32
 SEED = 42
