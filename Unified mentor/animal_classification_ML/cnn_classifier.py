@@ -3,16 +3,16 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.layers import Dense, Flatten, GlobalAveragePooling2D
 from tensorflow.keras.models import Model
-# from sklearn.metrics import classification_report, confusion_matrix
-# import numpy as np
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-# import json, confusion_matrix
-# import numpy as np
-# import matplotlin.pyplot as plt
-# import seaborn as sns
-# import json
-# Needed hyperparameters basic ones!!
+from sklearn.metrics import classification_report, confusion_matrix
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import json, confusion_matrix
+import numpy as np
+import matplotlin.pyplot as plt
+import seaborn as sns
+import json
+Needed hyperparameters basic ones!!
 IMG_SIZE = (224, 224)
 BATCH = 32
 SEED = 42
