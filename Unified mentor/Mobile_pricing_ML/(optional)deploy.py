@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 
 # Load the trained model
-model = joblib.load('ranfom_forest_model.joblib')
+model = joblib.load('random_forest_model.joblib')
 
 # Function to get user input and predict
 def predict_price_range():

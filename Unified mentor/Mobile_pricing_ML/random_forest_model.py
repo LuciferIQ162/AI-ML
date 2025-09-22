@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import joblib
 
 # Load the dataset
-df = pd.read_csv('dataset.csv')
+df = pd.read_csv('Unified mentor/Mobile_pricing_ML/dataset.csv')
 
 # Separate features (X) and target (y)
 X = df.drop('price_range', axis=1)# Axis 0 for columns
@@ -49,4 +49,4 @@ print("Confusion matrix saved as confusion_matrix_rf.png")
 
 # Saving the model entirely
 joblib.dump(model, 'random_forest_model.joblib')
-print("\nModel saved as ranfom_forest_model.joblib")
+print("\nModel saved as random_forest_model.joblib")
