@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import joblib
 
 # Load the dataset
-df = pd.read_csv('/home/shobhit/AI-ML/Unified mentor/Mobile_pricing_ML/dataset.csv')
+df = pd.read_csv('dataset.csv')
 
 # Separate features (X) and target (y)
 X = df.drop('price_range', axis=1)# Axis 0 for columns
