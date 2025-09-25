@@ -9,7 +9,7 @@ import joblib
 
 
 try:
-    df = pd.read_csv("/home/shobhit/AI-ML/Unified mentor/Heart_disease_ML/Heart Disease/dataset.csv")
+    df = pd.read_csv("home/shobhit/AI-ML/Unified mentor/Heart_disease_ML/Heart Disease/dataset.csv")
 
 except FileNotFoundError:
     print("some error while listing the file\nMay be file location is incorrect")
