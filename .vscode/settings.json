@@ -1,6 +1,6 @@
 {
     "python.testing.pytestArgs": [
-        "Autoencoders"
+        "notebooks"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true

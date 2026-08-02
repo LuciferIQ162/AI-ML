@@ -15,12 +15,13 @@ Scientific research
 <span style="color:#3b3b5c;">🏗 Project Structure</span>
 text
 .
-├── data/           # Raw and processed gamma radiation datasets
-├── notebooks/      # Jupyter notebooks for experiments
-├── src/            # Source code for models and utilities
-├── models/         # Saved trained models
-├── results/        # Output results and visualizations
-├── requirements.txt
+├── notebooks/
+│   ├── architectures/   # Autoencoders, GANs, and diffusion notebooks
+│   ├── algorithms/      # RL and unsupervised learning notebooks
+│   └── modules/         # Keras functionality, tuning, and optimization notebooks
+├── Documentation/       # ML algorithm notes
+├── regression Models/   # Python regression implementation files
+├── Unified mentor/      # Project-specific ML modules
 └── README.md
 <span style="color:#3b3b5c;">🚀 Getting Started</span>
 <ol style="font-size:1.05em;"> <li> <b>Clone the repository:</b><br> <code>git clone https://github.com/yourusername/gamma-radiation-ml.git<br>cd gamma-radiation-ml</code> </li> <li> <b>Install dependencies:</b><br> <code>pip install -r requirements.txt</code> </li> <li> <b>Run a sample notebook:</b><br> <code>jupyter notebook notebooks/gamma_detection.ipynb</code> </li> </ol>
